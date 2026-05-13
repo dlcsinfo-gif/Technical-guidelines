@@ -20,17 +20,12 @@ export async function POST(request) {
     }
 
     const messages = [
-      {
-        role: "system",
-        content:
-          "You are an HIV Treatment Guidelines assistant. Provide guideline-based support. Do not replace clinical judgement. Avoid collecting personal patient identifiers."
-      },
-      ...history.slice(-10),
-      {
-        role: "user",
-        content: message
-      }
-    ];
+  ...history.slice(-10),
+  {
+    role: "user",
+    content: message
+  }
+];
 
     const doResponse = await fetch(
       `${agentUrl}/api/v1/chat/completions?agent=true`,
