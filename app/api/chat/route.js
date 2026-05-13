@@ -21,10 +21,32 @@ export async function POST(request) {
 
     const messages = [
   ...history.slice(-10),
-  {
-    role: "user",
-    content: message
-  }
+{
+  role: "user",
+  content: `
+Please answer the following HIV treatment guideline question in a well-structured format.
+
+Use this format:
+## Summary
+Brief direct answer.
+
+## Recommended Management
+- Key steps
+- Medicines if relevant
+- Timing if relevant
+
+## Important Cautions
+- Contraindications
+- Drug interactions
+- When to refer
+
+## Notes
+- Mention that final decision should follow current national guidelines and clinical judgement.
+
+Question:
+${message}
+`
+}
 ];
 
     const doResponse = await fetch(
