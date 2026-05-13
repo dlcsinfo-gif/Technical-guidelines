@@ -24,7 +24,7 @@ export async function POST(request) {
 {
   role: "user",
   content: `
-Please answer the following HIV treatment guideline question in a well-structured format.
+Kindly answer the following HIV treatment guideline question in a well-structured format.
 
 Use this format:
 ## Summary
