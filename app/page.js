@@ -9,7 +9,6 @@ const presetQuestions = [
   "What is the guidance for HIV and TB co-treatment?",
   "When should ART be started after opportunistic infection?",
   "What monitoring is recommended after ART initiation?"
-  "A client from a high-risk group requests oral PrEP. Their rapid HIV antibody test is negative, but they report a flu-like illness and fever two weeks ago. How should you proceed with PrEP initiation?"
 ];
 
 export default function Home() {
